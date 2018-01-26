@@ -4,6 +4,19 @@
 //externas ou remotas de que as outras como "include" ou "require" simplesmente.
 require_once("config.php");
 
+//O novo objeto usuario "$root" é instanciado da classe "Usuario".
+$root = new Usuario();
+
+//Aqui o novo objeto "$root" executa a função ou método "loadById(4)" com o parâmetro "Id" de número 4.
+$root->loadById(4);
+
+//Aqui com o "echo $root;" será trazido à tela do usuário os itens associados ao array do "Id" de número 4.
+echo $root;
+
+
+
+/* Aqui abaixo foi um teste para o início da aula em outra explicação.
+
 //O objeto "$sql", instanciado da classe "Sql", recebe ou é atribuido à ele o conteúdo dessa classe.
 $sql = new Sql();
 
@@ -15,5 +28,7 @@ $usuarios = $sql->select("SELECT * FROM tb_usuarios");
 //Para terminar faremos um "echo json_encode($usuarios)" para trazer à tela do usuário todo o conteúdo da tabela por 
 //meio do array.
 echo json_encode($usuarios);
+
+*/
 
 ?>
