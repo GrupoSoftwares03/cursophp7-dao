@@ -62,7 +62,6 @@ class Usuario {
 			//A variável "$row", armazena a contagem do conteúdo que está no "array" aparti da posição zero.
 			$row = $results[0];
 
-			
 			$this->setIdusuario($row['idusuario']);
 			$this->setDeslogin($row['deslogin']);
 			$this->setDessenha($row['dessenha']);
@@ -97,7 +96,6 @@ class Usuario {
 		return $sql->select("SELECT * FROM tb_usuarios WHERE deslogin LIKE :SEARCH ORDER BY deslogin", array(
 			':SEARCH'=>"%" . $login . "%"
 		));
-
 	}
 
 		//Aqui como vai ser usado os get e set, a função não pode ser estática.
@@ -119,7 +117,6 @@ class Usuario {
 
 			//A variável "$row", armazena a contagem do conteúdo que está no "array" aparti da posição zero.
 			$row = $results[0];
-
 			
 			$this->setIdusuario($row['idusuario']);
 			$this->setDeslogin($row['deslogin']);
@@ -130,7 +127,6 @@ class Usuario {
 
 			throw new Exception("Login e/ou Senha Inválidos.");
 		}
-	
 	}
 	//Aqui nós temos o método mágico "__toString()", que diante de um echo no objeto, ele mostra na tela para o usuário.
 	//Aqui ele mostra todo o conteúdo sem exeção.
@@ -143,9 +139,7 @@ class Usuario {
 			"dessenha"=>$this->getDessenha(),
 			"dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
 		));
-
 	}
-
 }
 
 ?>
